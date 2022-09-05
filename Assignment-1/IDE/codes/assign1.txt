@@ -1,0 +1,46 @@
+#include <Arduino.h>
+int a,b,c,d,e,f,g,h,X,Y,Z;
+void setup() {
+pinMode(2,INPUT);//LSB
+pinMode(3,INPUT);
+pinMode(4,INPUT);
+pinMode(5,INPUT);//MSB
+pinMode(6,INPUT);//LSB
+pinMode(7,INPUT);
+pinMode(8,INPUT);
+pinMode(9,INPUT);//MSB
+pinMode(10,OUTPUT);
+pinMode(11,OUTPUT);
+pinMode(12,OUTPUT);
+
+}
+
+void loop() {
+   a=digitalRead(2);
+   b=digitalRead(3);
+   c=digitalRead(4);
+   d=digitalRead(5);
+   e=digitalRead(6);
+   f=digitalRead(7);
+   g=digitalRead(8);
+   h=digitalRead(9);
+
+X=(a*e+!a*!e)&&(b*f+!b*!f)&&(c*g+!c*!g)&&(d*h+!d*!h);
+Y=(d*!h)||((c*!g)&&(d*h+!d*!h))||((b*!f)&&(c*g+!c*!g)&&(d*h+!d*!h))||((a*!e)&&(c*g+!c*!g)&&(d*h+!d*!h)&&(b*f+!b*!f));
+Z=(!d*h)||((!c*g)&&(d*h+!d*!h))||((!b*f)&&(c*g+!c*!g)&&(d*h+!d*!h))||((!a*e)&&(c*g+!c*!g)&&(d*h+!d*!h)&&(b*f+!b*!f));
+if(X){
+  digitalWrite(10,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(12,LOW);
+}
+else if(Y){
+  digitalWrite(11,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(12,LOW);
+}
+else if(Z){
+  digitalWrite(12,HIGH);
+  digitalWrite(11,LOW);
+  digitalWrite(10,LOW);
+}
+}
