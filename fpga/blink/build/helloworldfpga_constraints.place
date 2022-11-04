@@ -1,3 +1,0 @@
-$iopadmap$helloworldfpga.r  22  32  0  # set_io r		34
-$iopadmap$helloworldfpga.g  24  32  0  # set_io g		39
-$iopadmap$helloworldfpga.b  30  32  0  # set_io b		38
