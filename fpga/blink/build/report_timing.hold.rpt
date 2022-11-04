@@ -1,0 +1,101 @@
+#Timing report of worst 3 path(s)
+# Unit scale: 1e-09 seconds
+# Output precision: 3
+
+#Path 1
+Startpoint: A.inpad[0] (.input clocked by virtual_io_clock)
+Endpoint  : out:r.outpad[0] (.output clocked by virtual_io_clock)
+Path Type : hold
+
+Point                                                                        Incr      Path
+-------------------------------------------------------------------------------------------
+clock virtual_io_clock (rise edge)                                          0.000     0.000
+clock source latency                                                        0.000     0.000
+input external delay                                                        0.000     0.000
+A.inpad[0] (.input)                                                         0.000     0.000
+$iopadmap$helloworldfpga.A.I_PAD_$inp[0] (BIDIR_CELL)                       0.000     0.000
+$iopadmap$helloworldfpga.A.I_DAT[0] (BIDIR_CELL)                           10.153    10.153
+r_LUT3_O.t_frag.XB1[0] (T_FRAG)                                             3.441    13.594
+r_LUT3_O.t_frag.XZ[0] (T_FRAG)                                              1.333    14.927
+$iopadmap$helloworldfpga.r.O_DAT[0] (BIDIR_CELL)                            4.936    19.863
+$iopadmap$helloworldfpga.r.O_PAD_$out[0] (BIDIR_CELL)                       9.726    29.589
+out:r.outpad[0] (.output)                                                   0.000    29.589
+data arrival time                                                                    29.589
+
+clock virtual_io_clock (rise edge)                                          0.000     0.000
+clock source latency                                                        0.000     0.000
+clock uncertainty                                                           0.000     0.000
+output external delay                                                       0.000     0.000
+data required time                                                                    0.000
+-------------------------------------------------------------------------------------------
+data required time                                                                   -0.000
+data arrival time                                                                    29.589
+-------------------------------------------------------------------------------------------
+slack (MET)                                                                          29.589
+
+
+#Path 2
+Startpoint: A.inpad[0] (.input clocked by virtual_io_clock)
+Endpoint  : out:g.outpad[0] (.output clocked by virtual_io_clock)
+Path Type : hold
+
+Point                                                                        Incr      Path
+-------------------------------------------------------------------------------------------
+clock virtual_io_clock (rise edge)                                          0.000     0.000
+clock source latency                                                        0.000     0.000
+input external delay                                                        0.000     0.000
+A.inpad[0] (.input)                                                         0.000     0.000
+$iopadmap$helloworldfpga.A.I_PAD_$inp[0] (BIDIR_CELL)                       0.000     0.000
+$iopadmap$helloworldfpga.A.I_DAT[0] (BIDIR_CELL)                           10.153    10.153
+g_LUT3_O.t_frag.XA1[0] (T_FRAG)                                             3.397    13.550
+g_LUT3_O.t_frag.XZ[0] (T_FRAG)                                              1.392    14.942
+$iopadmap$helloworldfpga.g.O_DAT[0] (BIDIR_CELL)                            6.162    21.104
+$iopadmap$helloworldfpga.g.O_PAD_$out[0] (BIDIR_CELL)                       9.726    30.830
+out:g.outpad[0] (.output)                                                   0.000    30.830
+data arrival time                                                                    30.830
+
+clock virtual_io_clock (rise edge)                                          0.000     0.000
+clock source latency                                                        0.000     0.000
+clock uncertainty                                                           0.000     0.000
+output external delay                                                       0.000     0.000
+data required time                                                                    0.000
+-------------------------------------------------------------------------------------------
+data required time                                                                   -0.000
+data arrival time                                                                    30.830
+-------------------------------------------------------------------------------------------
+slack (MET)                                                                          30.830
+
+
+#Path 3
+Startpoint: A.inpad[0] (.input clocked by virtual_io_clock)
+Endpoint  : out:b.outpad[0] (.output clocked by virtual_io_clock)
+Path Type : hold
+
+Point                                                                        Incr      Path
+-------------------------------------------------------------------------------------------
+clock virtual_io_clock (rise edge)                                          0.000     0.000
+clock source latency                                                        0.000     0.000
+input external delay                                                        0.000     0.000
+A.inpad[0] (.input)                                                         0.000     0.000
+$iopadmap$helloworldfpga.A.I_PAD_$inp[0] (BIDIR_CELL)                       0.000     0.000
+$iopadmap$helloworldfpga.A.I_DAT[0] (BIDIR_CELL)                           10.153    10.153
+b_LUT3_O.t_frag.XA1[0] (T_FRAG)                                             2.779    12.932
+b_LUT3_O.t_frag.XZ[0] (T_FRAG)                                              1.392    14.324
+$iopadmap$helloworldfpga.b.O_DAT[0] (BIDIR_CELL)                            7.644    21.968
+$iopadmap$helloworldfpga.b.O_PAD_$out[0] (BIDIR_CELL)                       9.726    31.694
+out:b.outpad[0] (.output)                                                   0.000    31.694
+data arrival time                                                                    31.694
+
+clock virtual_io_clock (rise edge)                                          0.000     0.000
+clock source latency                                                        0.000     0.000
+clock uncertainty                                                           0.000     0.000
+output external delay                                                       0.000     0.000
+data required time                                                                    0.000
+-------------------------------------------------------------------------------------------
+data required time                                                                   -0.000
+data arrival time                                                                    31.694
+-------------------------------------------------------------------------------------------
+slack (MET)                                                                          31.694
+
+
+#End of timing report
